@@ -1,0 +1,6 @@
+1- generate uuids 
+
+2- csv to sqlite
+
+3- server
+

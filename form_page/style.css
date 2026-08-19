@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #111111;
+    background: #ffffff;
+}
+
+.page {
+    min-height: calc(100vh - 105px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   Illustration
+========================= */
+
+.illustration {
+    margin-top: 44px;
+    width: 274px;
+    height: 372px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration img {
+    width: 274px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* =========================
+   Message
+========================= */
+
+.message {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.message h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.4px;
+}
+
+.message > p {
+    margin-top: 25px;
+
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* =========================
+   Technical Details
+========================= */
+
+.technical-toggle {
+    margin-top: 9px;
+
+    border: none;
+    background: transparent;
+
+    color: #333333;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.technical-toggle:hover {
+    text-decoration: underline;
+}
+
+.arrow {
+    width: 11px;
+    height: 11px;
+
+    border-right: 1.5px solid #555;
+    border-bottom: 1.5px solid #555;
+
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+
+    margin-top: -5px;
+}
+
+.arrow.open {
+    transform: rotate(225deg);
+    margin-top: 5px;
+}
+
+.technical-details {
+    max-width: 600px;
+
+    margin: 0 auto;
+    padding: 0;
+
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.3s ease,
+        opacity 0.3s ease,
+        padding 0.3s ease;
+}
+
+.technical-details.show {
+    max-height: 150px;
+    opacity: 1;
+    padding-top: 15px;
+}
+
+.technical-details p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =========================
+   Create Form
+========================= */
+
+.create-form {
+    margin-top: 24px;
+}
+
+.create-form button {
+    width: 215px;
+    height: 50px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #07858c;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease;
+}
+
+.create-form button:hover {
+    background: #08747a;
+}
+
+.create-form button:active {
+    transform: scale(0.98);
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    min-height: 105px;
+
+    padding: 0 25px 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    font-size: 16px;
+    color: #111111;
+}
+
+.footer-links a {
+    color: #0067b8;
+    text-decoration: underline;
+}
+
+.footer-links a:hover {
+    color: #004f8c;
+}
+
+.separator {
+    color: #777777;
+}
+
+.microsoft-brand {
+    margin-top: 24px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #666666;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.microsoft-brand img {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+/* Tablet and small laptops (601px - 1024px) */
+@media (max-width: 1024px) {
+
+    .illustration {
+        margin-top: 36px;
+    }
+
+    .message h1 {
+        font-size: 31px;
+    }
+
+    .message > p {
+        font-size: 20px;
+    }
+}
+
+/* Phones and small tablets (max-width: 600px) */
+@media (max-width: 600px) {
+
+    .page {
+        min-height: calc(100vh - 90px);
+    }
+
+    .illustration {
+        margin-top: 30px;
+        width: 205px;
+        height: 278px;
+    }
+
+    .illustration img {
+        width: 205px;
+    }
+
+    .message {
+        margin-top: 25px;
+        padding: 0 20px;
+    }
+
+    .message h1 {
+        font-size: 29px;
+    }
+
+    .message > p {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+.technical-details {
+        max-width: 100%;
+    }
+
+    .create-form {
+        margin-top: 24px;
+    }
+
+    .create-form button {
+        width: 100%;
+        max-width: 215px;
+    }
+
+    .footer {
+        min-height: 90px;
+        padding-bottom: 20px;
+    }
+
+    .footer-links {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .microsoft-brand {
+        margin-top: 25px;
+    }
+
+    .microsoft-brand img {
+        width: 150px;
+        height: auto;
+        display: block;
+    }
+}
+
+/* Very small phones (max-width: 360px) */
+@media (max-width: 360px) {
+
+    .illustration {
+        width: 170px;
+        height: 231px;
+    }
+
+    .illustration img {
+        width: 170px;
+    }
+
+    .message h1 {
+        font-size: 25px;
+    }
+
+    .message > p {
+        font-size: 16px;
+    }
+
+    .footer-links {
+        font-size: 12px;
+    }
+
+    .microsoft-brand img {
+        width: 120px;
+    }
+}
